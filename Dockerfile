@@ -15,12 +15,9 @@ RUN bundle install
 
 COPY . .
 
-RUN bundle exec rails db:migrate RAILS_ENV=development
+RUN rails db:migrate RAILS_ENV=development
 RUN RAILS_ENV=development rake assets:precompile
-
-EXPOSE 3000
 
 ENV SOLR_URL=http://solr-server:8983/collection
 
-CMD bundle exec rails s
-
+CMD rails s -b 0.0.0.0

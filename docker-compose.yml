@@ -1,4 +1,4 @@
-version: "2.0"
+version: "2.2"
 
 services:
 
@@ -13,7 +13,10 @@ services:
     build: .
     environment:
      - "SOLR_URL=http://solr:8983/solr/discovery"
+     - "RAILS_ENV=development"
     ports:
-     - 3000:3000
+     - "3000:3000"
+    depends_on:
+     - solr
 
 

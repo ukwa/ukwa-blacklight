@@ -7,6 +7,24 @@ GIT
       blacklight_range_limit (= 7.0.0)
       rails (~> 5)
 
+GIT
+  remote: https://github.com/projectblacklight/blacklight-gallery.git
+  revision: f885a5a57db751b4cdf57ebdff47d86a2fcad426
+  specs:
+    blacklight-gallery (1.0.0.alpha)
+      blacklight (~> 7.0)
+      bootstrap (~> 4.0)
+      openseadragon (>= 0.2.0)
+      rails
+
+GIT
+  remote: https://github.com/projectblacklight/blacklight_advanced_search.git
+  revision: 9c23f0e9aad6a789ec912336766289927ea0729b
+  specs:
+    blacklight_advanced_search (7.0.0.alpha)
+      blacklight (~> 7.0)
+      parslet
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -66,12 +84,6 @@ GEM
       kaminari (>= 0.15)
       nokogiri (~> 1.6)
       rails (~> 5.1)
-    blacklight-maps (0.5.0)
-      blacklight (>= 6.1.0)
-      bootstrap-sass (~> 3.2)
-      leaflet-markercluster-rails
-      leaflet-rails
-      rails
     blacklight_range_limit (7.0.0)
       blacklight
       jquery-rails
@@ -83,9 +95,6 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
-    bootstrap-sass (3.4.1)
-      autoprefixer-rails (>= 5.2.1)
-      sassc (>= 2.0.0)
     builder (3.2.3)
     byebug (11.0.1)
     capybara (3.16.2)
@@ -141,10 +150,6 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
-    leaflet-markercluster-rails (0.7.0)
-      railties (>= 3.1)
-    leaflet-rails (1.4.0)
-      rails (>= 4.2.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -167,6 +172,9 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.10.2)
       mini_portile2 (~> 2.4.0)
+    openseadragon (0.5.0)
+      rails (> 3.2.0)
+    parslet (1.8.2)
     popper_js (1.14.5)
     public_suffix (3.0.3)
     puma (3.12.1)
@@ -281,7 +289,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  blacklight-maps
+  blacklight-gallery!
+  blacklight_advanced_search!
   blacklight_range_limit (= 7.0.0)
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.0)

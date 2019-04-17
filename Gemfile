@@ -62,8 +62,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'warclight', github: 'archivesunleashed/warclight'
+gem 'blacklight_advanced_search', github: 'projectblacklight/blacklight_advanced_search'
+gem 'blacklight-gallery', github: 'projectblacklight/blacklight-gallery'
 gem 'blacklight_range_limit', '7.0.0'
-gem 'blacklight-maps'
 group :development, :test do
   gem 'solr_wrapper', '>= 0.3'
 end

@@ -66,6 +66,12 @@ GEM
       kaminari (>= 0.15)
       nokogiri (~> 1.6)
       rails (~> 5.1)
+    blacklight-maps (0.5.0)
+      blacklight (>= 6.1.0)
+      bootstrap-sass (~> 3.2)
+      leaflet-markercluster-rails
+      leaflet-rails
+      rails
     blacklight_range_limit (7.0.0)
       blacklight
       jquery-rails
@@ -77,6 +83,9 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     builder (3.2.3)
     byebug (11.0.1)
     capybara (3.16.2)
@@ -132,6 +141,10 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
+    leaflet-markercluster-rails (0.7.0)
+      railties (>= 3.1)
+    leaflet-rails (1.4.0)
+      rails (>= 4.2.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -268,6 +281,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  blacklight-maps
   blacklight_range_limit (= 7.0.0)
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.0)
@@ -299,4 +313,4 @@ RUBY VERSION
    ruby 2.5.3p105
 
 BUNDLED WITH
-   2.0.1
+   1.17.3

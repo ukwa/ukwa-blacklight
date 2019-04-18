@@ -3,7 +3,7 @@ class SolrDocument
   include Blacklight::Solr::Document
   include Blacklight::Gallery::OpenseadragonSolrDocument
 
- include Warclight::SolrDocument
+  include Warclight::SolrDocument
 
   # self.unique_key = 'id'
 
@@ -19,4 +19,6 @@ class SolrDocument
   # and Blacklight::Document::SemanticFields#to_semantic_values
   # Recommendation: Use field names from Dublin Core
   use_extension(Blacklight::Document::DublinCore)
+
+  SolrDocument.use_extension(Blacklight::Document::CsvExport)
 end

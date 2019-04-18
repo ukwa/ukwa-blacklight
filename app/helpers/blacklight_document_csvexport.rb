@@ -8,9 +8,9 @@ module Blacklight::Document::CsvExport
     document = self
     str = ''
     ((::CSV::Writer if ::CSV.const_defined? :Writer) || ::CSV).generate(str) do |csv|
-      arr = [document.id, document.get('title_display')]
+      arr = [document.id, document['title']]
       field_names_for_csv.each do |solr_fname|
-        arr << document.get(solr_fname) || nil
+        arr << document[solr_fname] || nil
       end
       csv << arr
     end
@@ -26,7 +26,8 @@ module Blacklight::Document::CsvExport
   end
 
   def field_names_for_csv
-    Blacklight.config[:index_fields][:field_names]
+    [ 'content_type' ]
+    #Blacklight.config[:index_fields][:field_names]
   end
 end
 

@@ -20,5 +20,6 @@ class SolrDocument
   # Recommendation: Use field names from Dublin Core
   use_extension(Blacklight::Document::DublinCore)
 
+  require 'blacklight_document_csvexport'
   SolrDocument.use_extension(Blacklight::Document::CsvExport)
 end
